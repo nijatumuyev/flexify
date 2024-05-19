@@ -3,6 +3,7 @@ import 'package:flexify/flexify.dart';
 
 void main() {
   runApp(
+    //Wrap your app with Flexify for initialize
     const Flexify(
       designWidth: 375,
       designHeight: 812,

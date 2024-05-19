@@ -8,9 +8,19 @@ Flexify is a Flutter package that makes it easy to adapt your applications to di
 - Customizable font size resolution.
 - Easy integration with existing Flutter applications.
 
+## Installation
+
+Add the following line to your `pubspec.yaml` file:
+
+```yaml
+dependencies:
+  flexify: ^1.0.0
+  ```
+
+
 ## Screenshot
 
-![Screenshot](./assets/example.png)
+<img src="./assets/example.png" alt="Screenshot" width="300"/>
 
 ## Usage
 
@@ -20,6 +30,7 @@ import 'package:flexify/flexify.dart';
 
 void main() {
   runApp(
+    //Wrap your app with Flexify for initialize
     const Flexify(
       designWidth: 375,
       designHeight: 812,
@@ -101,11 +112,4 @@ class ExampleScreen extends StatelessWidget {
   }
 }
 
-## Installation
-
-Add the following line to your `pubspec.yaml` file:
-
-```yaml
-dependencies:
-  flexify: ^1.0.0
 
