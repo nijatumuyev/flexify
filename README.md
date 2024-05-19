@@ -20,7 +20,7 @@ dependencies:
 
 ## Screenshot
 
-<img src="./assets/example.png" alt="Screenshot" width="300"/>
+<img src="https://raw.githubusercontent.com/nijatumuyev/flexify/main/assets/example.png" alt="Screenshot" width="300"/>
 
 ## Usage
 
