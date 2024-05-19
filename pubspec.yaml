@@ -1,6 +1,6 @@
 name: flexify
 description: "This Flutter package makes it easy to adapt your applications to different screen sizes. Simple to use, it offers developers the ability to automatically adjust their interfaces according to device dimensions. With this package, your app looks great on everything from small phones to large tablets."
-version: 1.0.0
+version: 1.0.1
 homepage: https://github.com/nijatumuyev/flexify
 
 environment:
