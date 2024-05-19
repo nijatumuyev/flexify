@@ -1,0 +1,18 @@
+name: example
+description: An example project demonstrating the usage of the flexify package.
+version: 2.0.0+8
+publish_to: none
+
+environment:
+  sdk: '>=3.3.4 <4.0.0'
+  flutter: ">=1.17.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flexify:
+    path: ../
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
