@@ -8,7 +8,6 @@ part 'extensions/size_extension.dart';
 part 'components/context_creator.dart';
 
 /// A typedef for a function that resolves font sizes.
-typedef FontSizeResolver = double Function(num fontSize, FlexifyInit instance);
 
 /// Flexify is a widget that helps in making the UI responsive to different screen sizes.
 class Flexify extends StatefulWidget {
@@ -22,7 +21,6 @@ class Flexify extends StatefulWidget {
   final Widget app;
 
   /// An optional function to resolve font sizes.
-  final FontSizeResolver? fontSizeResolver;
 
   /// A global key for accessing the Flexify state.
   static final globalKey = GlobalKey<_FlexifyState>();
@@ -33,7 +31,6 @@ class Flexify extends StatefulWidget {
     required this.designWidth,
     required this.designHeight,
     required this.app,
-    this.fontSizeResolver,
   });
 
   @override
@@ -48,7 +45,6 @@ class _FlexifyState extends State<Flexify> {
       designWidth: widget.designWidth,
       designHeight: widget.designHeight,
       context: context,
-      fontSizeResolver: widget.fontSizeResolver,
     );
   }
 

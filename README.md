@@ -5,7 +5,7 @@ Flexify is a Flutter package that makes it easy to adapt your applications to di
 ## Features
 
 - Automatically adjust UI elements based on screen size.
-- Customizable font size resolution.
+- Responive font size resolution.
 - Easy integration with existing Flutter applications.
 
 ## Installation
@@ -14,13 +14,13 @@ Add the following line to your `pubspec.yaml` file:
 
 ```yaml
 dependencies:
-  flexify: ^1.0.4
+  flexify: ^1.0.5
   ```
 
 
 ## Screenshot
 
-<img src="https://raw.githubusercontent.com/nijatumuyev/flexify/main/assets/example.png" alt="Screenshot" width="300"/>
+<img src="https://raw.githubusercontent.com/nijatumuyev/flexify/main/assets/example.png" alt="Screenshot" width="250"/>
 
 ## Usage
 

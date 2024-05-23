@@ -8,7 +8,6 @@ class FlexifyInit {
 
   late double _designWidth;
   late double _designHeight;
-  FontSizeResolver? _fontSizeResolver;
   BuildContext? _context;
 
   FlexifyInit._internal();
@@ -18,11 +17,9 @@ class FlexifyInit {
     required double designWidth,
     required double designHeight,
     required BuildContext context,
-    FontSizeResolver? fontSizeResolver,
   }) {
     _instance._designWidth = designWidth;
     _instance._designHeight = designHeight;
-    _instance._fontSizeResolver = fontSizeResolver;
     _instance._context = context;
   }
 
@@ -46,7 +43,5 @@ class FlexifyInit {
   double setHeight(num height) => height * scaleHeight;
 
   /// Returns the resolved font size.
-  double setRt(num fontSize) => _fontSizeResolver != null
-      ? _fontSizeResolver!(fontSize, this)
-      : _mediaQueryData.textScaler.scale(fontSize.toDouble());
+  double setRt(num fontSize) => fontSize * min(scaleWidth, scaleHeight);
 }
