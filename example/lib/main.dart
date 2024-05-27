@@ -48,8 +48,8 @@ class ExampleScreen extends StatelessWidget {
                 ),
               ),
             ),
-            20.verticalSpace, // SizedBox(height:20.rh)
-            20.horizontalSpace, // SizedBox(width: 20.rw),
+            20.verticalSpace, // SizedBox(height:20.rh) responsive vertical space
+            20.horizontalSpace, // SizedBox(width: 20.rw) responsive horizontal space
 
             /*
 
