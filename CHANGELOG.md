@@ -1,5 +1,8 @@
 # Changelog
 
+## [2.0.0] - 27.05.2024
+### Added
+- Added easy navigations with various animations
 
 ## [1.0.5] - 23.05.2024
 ### Updated

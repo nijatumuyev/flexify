@@ -2,14 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flexify/flexify.dart';
 
 void main() {
-  runApp(
-    //Wrap your app with Flexify for initialize
-    const Flexify(
-      designWidth: 375,
-      designHeight: 812,
-      app: MyApp(),
-    ),
-  );
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -17,10 +10,12 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
-        appBar: AppBar(title: const Text('Flexify Example')),
-        body: const ExampleScreen(),
+    //Wrap your app with Flexify for initialize
+    return Flexify(
+      designWidth: 375,
+      designHeight: 812,
+      app: MaterialApp(
+        home: ExampleScreen(),
       ),
     );
   }
@@ -31,55 +26,66 @@ class ExampleScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          // Example using .rt for responsive text size
-          Text(
-            'This is a Responsive Text',
-            style: TextStyle(
-              fontSize: 20.rt,
-              fontWeight: FontWeight.w700,
-            ),
-          ),
-          SizedBox(height: 20.0.rh), // Example using .rh for responsive height
-
-          // Example using .rw & .rh for responsive width & height
-          Container(
-            width: 200.rw,
-            height: 200.rh,
-            color: Colors.blue,
-            child: Center(
-              child: Text(
-                'Box with responsive width and height',
-                textAlign: TextAlign.center,
-                style: TextStyle(
-                  fontSize: 20.rt,
-                  fontWeight: FontWeight.w700,
+    return Scaffold(
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Container(
+              width: 250.rw, //responsive width
+              height: 250.rh, //responsive height
+              decoration: BoxDecoration(
+                color: Colors.blue,
+                borderRadius: BorderRadius.circular(25.rs), // responsive size
+              ),
+              child: Center(
+                child: Text(
+                  'This is a Responsive Text',
+                  style: TextStyle(
+                    fontSize: 22.rt,
+                    fontWeight: FontWeight.w700,
+                  ),
                 ),
               ),
             ),
-          ),
-          SizedBox(height: 20.0.rh),
+            20.verticalSpace, // SizedBox(height:20.rh)
+            20.horizontalSpace, // SizedBox(width: 20.rw),
 
-          // Example using .rs for responsive size
-          Container(
-            width: 200.rs,
-            height: 200.rs,
-            color: Colors.red,
-            child: Center(
-              child: Text(
-                'Box with responsive size',
-                textAlign: TextAlign.center,
-                style: TextStyle(
-                  fontSize: 20.rt,
-                  fontWeight: FontWeight.w700,
-                ),
-              ),
-            ),
-          ),
-        ],
+            /*
+
+           - Easy Navigations with Animations
+
+             Flexify.go(
+              NewScreen(),
+              animation: FlexifyRouteAnimations.fade,
+              duration: Duration(milliseconds: 500));
+
+             Flexify.goRemove(
+              NewScreen(),
+              animation: FlexifyRouteAnimations.slide,
+              duration: Duration(milliseconds: 500));
+
+             Flexify.goRemoveAll(
+               NewScreen(),
+               animation: FlexifyRouteAnimations.scale,
+               duration: Duration(milliseconds: 500));
+
+             Flexify.back();
+
+
+           - Available Animations
+
+            FlexifyRouteAnimations.fade
+            FlexifyRouteAnimations.slide
+            FlexifyRouteAnimations.scale
+            FlexifyRouteAnimations.rotate
+            FlexifyRouteAnimations.zoom
+            FlexifyRouteAnimations.size
+            FlexifyRouteAnimations.elastic
+
+            */
+          ],
+        ),
       ),
     );
   }
