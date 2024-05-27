@@ -95,20 +95,23 @@ class FlexifyResponsiveWidget extends StatelessWidget {
 - Easy navigations with animations : 
 
 ```dart
- Flexify.go(
-NewScreen(),
-animation: FlexifyRouteAnimations.fade,
-duration: Duration(milliseconds: 500));
+Flexify.go(
+  NewScreen(),
+  animation: FlexifyRouteAnimations.fade,
+  duration: Duration(milliseconds: 500),
+);
 
 Flexify.goRemove(
-NewScreen(),
-animation: FlexifyRouteAnimations.slide,
-duration: Duration(milliseconds: 500));
+  NewScreen(),
+  animation: FlexifyRouteAnimations.slide,
+  duration: Duration(milliseconds: 500),
+);
 
 Flexify.goRemoveAll(
-NewScreen(),
-animation: FlexifyRouteAnimations.scale,
-duration: Duration(milliseconds: 500));
+  NewScreen(),
+  animation: FlexifyRouteAnimations.scale,
+  duration: Duration(milliseconds: 500),
+);
 
 Flexify.back();
 ```
