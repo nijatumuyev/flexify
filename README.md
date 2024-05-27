@@ -15,13 +15,13 @@ Add the following line to your `pubspec.yaml` file:
 
 ```yaml
 dependencies:
-  flexify: ^2.0.0
+  flexify: ^2.0.1
   ```
 
 
-## Screenshot
+<!-- ## Screenshot
 
-<img src="https://raw.githubusercontent.com/nijatumuyev/flexify/main/assets/example.png" alt="Screenshot" width="250"/>
+<img src="https://raw.githubusercontent.com/nijatumuyev/flexify/main/assets/example.png" alt="Screenshot" width="250"/> -->
 
 ## Usage
 
@@ -50,8 +50,12 @@ class MyApp extends StatelessWidget {
     );
   }
 }
+```
 
-class ExampleScreen extends StatelessWidget {
+- Responsive designing : 
+
+```dart
+class FlexifyResponsiveWidget extends StatelessWidget {
   const ExampleScreen({super.key});
 
   @override
@@ -72,53 +76,51 @@ class ExampleScreen extends StatelessWidget {
                 child: Text(
                   'This is a Responsive Text',
                   style: TextStyle(
-                    fontSize: 22.rt,
+                    fontSize: 22.rt, // responsive font-size
                     fontWeight: FontWeight.w700,
                   ),
                 ),
               ),
             ),
-            20.verticalSpace, // SizedBox(height:20.rh)
-            20.horizontalSpace, // SizedBox(width: 20.rw),
-
-            /*
-
-           - Easy Navigations with Animations
-
-             Flexify.go(
-              NewScreen(),
-              animation: FlexifyRouteAnimations.fade,
-              duration: Duration(milliseconds: 500));
-
-             Flexify.goRemove(
-              NewScreen(),
-              animation: FlexifyRouteAnimations.slide,
-              duration: Duration(milliseconds: 500));
-
-             Flexify.goRemoveAll(
-               NewScreen(),
-               animation: FlexifyRouteAnimations.scale,
-               duration: Duration(milliseconds: 500));
-
-             Flexify.back();
-
-
-           - Available Animations
-
-            FlexifyRouteAnimations.fade
-            FlexifyRouteAnimations.slide
-            FlexifyRouteAnimations.scale
-            FlexifyRouteAnimations.rotate
-            FlexifyRouteAnimations.zoom
-            FlexifyRouteAnimations.size
-            FlexifyRouteAnimations.elastic
-
-            */
+            20.verticalSpace, // SizedBox(height:20.rh) responsive vertical space
+            20.horizontalSpace, // SizedBox(width: 20.rw) responsive horizontal space
           ],
         ),
       ),
     );
   }
 }
+```
 
+- Easy navigations with animations : 
 
+```dart
+ Flexify.go(
+NewScreen(),
+animation: FlexifyRouteAnimations.fade,
+duration: Duration(milliseconds: 500));
+
+Flexify.goRemove(
+NewScreen(),
+animation: FlexifyRouteAnimations.slide,
+duration: Duration(milliseconds: 500));
+
+Flexify.goRemoveAll(
+NewScreen(),
+animation: FlexifyRouteAnimations.scale,
+duration: Duration(milliseconds: 500));
+
+Flexify.back();
+```
+
+- Available Animations :
+
+```dart
+FlexifyRouteAnimations.fade
+FlexifyRouteAnimations.slide
+FlexifyRouteAnimations.scale
+FlexifyRouteAnimations.rotate
+FlexifyRouteAnimations.zoom
+FlexifyRouteAnimations.size
+FlexifyRouteAnimations.elastic
+```
