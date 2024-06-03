@@ -4,7 +4,7 @@ version: 2.1.0
 homepage: https://github.com/nijatumuyev/flexify
 
 environment:
-  sdk: ">=2.17.0"
+  sdk: '>=2.17.0 <=3.4.2'
   flutter: ">=1.17.0"
 
 dependencies:
