@@ -11,7 +11,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     //Wrap your app with Flexify for initialize
-    return Flexify(
+    return const Flexify(
       designWidth: 375,
       designHeight: 812,
       app: MaterialApp(
