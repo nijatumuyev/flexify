@@ -55,22 +55,34 @@ class ExampleScreen extends StatelessWidget {
 
            - Easy Navigations with Animations
 
+           - Alternative of Navigator.push
+
              Flexify.go(
               NewScreen(),
               animation: FlexifyRouteAnimations.fade,
               duration: Duration(milliseconds: 500));
 
+
+            - Alternative of Navigator.pushReplacement
+            
              Flexify.goRemove(
               NewScreen(),
               animation: FlexifyRouteAnimations.slide,
               duration: Duration(milliseconds: 500));
+
+
+            - Alternative of Navigator.pushAndRemoveUntil
 
              Flexify.goRemoveAll(
                NewScreen(),
                animation: FlexifyRouteAnimations.scale,
                duration: Duration(milliseconds: 500));
 
+
+            - Alternative of Navigator.pop
              Flexify.back();
+
+
 
 
            - Available Animations
@@ -82,7 +94,14 @@ class ExampleScreen extends StatelessWidget {
             FlexifyRouteAnimations.zoom
             FlexifyRouteAnimations.size
             FlexifyRouteAnimations.elastic
-
+            FlexifyRouteAnimations.flip,
+            FlexifyRouteAnimations.slideFromBottom,
+            FlexifyRouteAnimations.customFadeScale,
+            FlexifyRouteAnimations.blur,
+            FlexifyRouteAnimations.slideAndFade,
+            FlexifyRouteAnimations.rotateAndScale,
+            FlexifyRouteAnimations.flipAndFade,
+            
             */
           ],
         ),

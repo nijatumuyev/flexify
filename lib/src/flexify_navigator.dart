@@ -8,12 +8,12 @@ class FlexifyNavigator {
   static void _navigate(
     Widget page, {
     FlexifyRouteAnimations? animation,
-    Duration? duration,
+    Duration? animationDuration,
     bool replace = false,
     bool removeUntil = false,
   }) {
     assert(
-      animation == null || duration != null,
+      animation == null || animationDuration != null,
       'Duration must be provided when using a custom animation',
     );
 
@@ -23,7 +23,7 @@ class FlexifyNavigator {
       throw FlutterError('Navigator context is not available.');
     }
 
-    Route route = _getRoute(context, page, animation, duration);
+    Route route = _getRoute(context, page, animation, animationDuration);
 
     if (replace) {
       if (removeUntil) {
@@ -59,22 +59,25 @@ class FlexifyNavigator {
 
   /// Navigate to a new screen.
   static void go(Widget page,
-      {FlexifyRouteAnimations? animation, Duration? duration}) {
-    _navigate(page, animation: animation, duration: duration);
+      {FlexifyRouteAnimations? animation, Duration? animationDuration}) {
+    _navigate(page, animation: animation, animationDuration: animationDuration);
   }
 
   /// Navigate to a new screen and remove the current screen.
   static void goRemove(Widget page,
-      {FlexifyRouteAnimations? animation, Duration? duration}) {
-    _navigate(page, animation: animation, duration: duration, replace: true);
+      {FlexifyRouteAnimations? animation, Duration? animationDuration}) {
+    _navigate(page,
+        animation: animation,
+        animationDuration: animationDuration,
+        replace: true);
   }
 
   /// Navigate to a new screen and remove all previous screens.
   static void goRemoveAll(Widget page,
-      {FlexifyRouteAnimations? animation, Duration? duration}) {
+      {FlexifyRouteAnimations? animation, Duration? animationDuration}) {
     _navigate(page,
         animation: animation,
-        duration: duration,
+        animationDuration: animationDuration,
         replace: true,
         removeUntil: true);
   }

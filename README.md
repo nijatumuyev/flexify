@@ -15,7 +15,7 @@ Add the following line to your `pubspec.yaml` file:
 
 ```yaml
 dependencies:
-  flexify: ^2.0.2
+  flexify: ^2.1.0
   ```
 
 
@@ -126,4 +126,11 @@ FlexifyRouteAnimations.rotate
 FlexifyRouteAnimations.zoom
 FlexifyRouteAnimations.size
 FlexifyRouteAnimations.elastic
+FlexifyRouteAnimations.flip
+FlexifyRouteAnimations.slideFromBottom,
+FlexifyRouteAnimations.customFadeScale,
+FlexifyRouteAnimations.blur,
+FlexifyRouteAnimations.slideAndFade,
+FlexifyRouteAnimations.rotateAndScale,
+FlexifyRouteAnimations.flipAndFade,
 ```

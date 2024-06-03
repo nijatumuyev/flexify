@@ -1,6 +1,7 @@
 library flexify;
 
 import 'dart:math' show min;
+import 'dart:ui';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -36,21 +37,23 @@ class Flexify extends StatefulWidget {
 
   /// Navigate to a new screen.
   static void go(Widget page,
-      {FlexifyRouteAnimations? animation, Duration? duration}) {
-    FlexifyNavigator.go(page, animation: animation, duration: duration);
+      {FlexifyRouteAnimations? animation, Duration? animationDuration}) {
+    FlexifyNavigator.go(page,
+        animation: animation, animationDuration: animationDuration);
   }
 
   /// Navigate to a new screen and remove the current screen.
   static void goRemove(Widget page,
       {FlexifyRouteAnimations? animation, Duration? duration}) {
-    FlexifyNavigator.goRemove(page, animation: animation, duration: duration);
+    FlexifyNavigator.goRemove(page,
+        animation: animation, animationDuration: duration);
   }
 
   /// Navigate to a new screen and remove all previous screens.
   static void goRemoveAll(Widget page,
       {FlexifyRouteAnimations? animation, Duration? duration}) {
     FlexifyNavigator.goRemoveAll(page,
-        animation: animation, duration: duration);
+        animation: animation, animationDuration: duration);
   }
 
   /// Navigate back to the previous screen.

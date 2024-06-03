@@ -1,5 +1,11 @@
 # Changelog
 
+## [2.1.0] - 03.06.2024
+### Added
+- Added new route animations.
+### Changed
+- Required Flutter & Dart SDK version is downgraded
+
 ## [2.0.2] - 27.05.2024
 ### Added
 - Added easy navigations with various animations
