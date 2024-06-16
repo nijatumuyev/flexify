@@ -91,11 +91,11 @@ class FlexifyRouteAnimationBuilder {
               animation: flipAnimation,
               child: child,
               builder: (context, child) {
-                final angle = flipAnimation.value * 3.141592653589793;
+                final angle = flipAnimation.value * pi;
                 final isUnder = (angle > 1.5708);
                 if (isUnder) {
                   return Transform(
-                    transform: Matrix4.rotationY(angle - 3.141592653589793),
+                    transform: Matrix4.rotationY(angle - pi),
                     alignment: Alignment.center,
                     child: page,
                   );

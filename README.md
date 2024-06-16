@@ -15,7 +15,7 @@ Add the following line to your `pubspec.yaml` file:
 
 ```yaml
 dependencies:
-  flexify: ^2.1.0
+  flexify: ^2.1.1
   ```
 
 

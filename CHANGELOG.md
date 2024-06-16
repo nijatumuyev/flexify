@@ -1,5 +1,9 @@
 # Changelog
 
+## [2.1.1] - 16.06.2024
+### Fixed
+- Uncompatible Dart SDK version problem fixed
+
 ## [2.1.0] - 03.06.2024
 ### Added
 - Added new route animations.

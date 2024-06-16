@@ -1,6 +1,6 @@
 library flexify;
 
-import 'dart:math' show min;
+import 'dart:math' show min, pi;
 import 'dart:ui';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';

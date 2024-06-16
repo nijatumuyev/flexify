@@ -43,7 +43,6 @@ extension ResponsiveScale on num {
   }
 
   void _handleError(dynamic error) {
-    // Log the error or show an appropriate message to the user
     debugPrint('ResponsiveScale encountered an error: $error');
   }
 
